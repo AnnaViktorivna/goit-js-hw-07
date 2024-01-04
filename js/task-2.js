@@ -1,11 +1,3 @@
-// const arr = [];
-
-// for (let i = 0; i < 6; i++) {
-//   const myElem = document.createElement("li");
-//   myElem.style.listStyle = "none";
-//   arr.push(myElem);
-// }
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -33,6 +25,22 @@ const images = [
   },
 ];
 
+const galleryElement = document.querySelector(".gallery");
+
+images.forEach((image) => {
+  const listElement = document.createElement("li");
+  const imgElement = document.createElement("img");
+
+  imgElement.src = image.url;
+  imgElement.alt = image.alt;
+
+  listElement.classList.add("list-element-style");
+  imgElement.classList.add("img-element-style");
+
+  listElement.appendChild(imgElement);
+  galleryElement.appendChild(listElement);
+});
+
 // const listElement = document.querySelector(".gallery");
 
 // const markup = images
@@ -42,21 +50,3 @@ const images = [
 //   .join("");
 
 // listElement.insertAdjacentHTML("beforeend", markup);
-
-const itemElement = document.querySelector(".gallery");
-
-images.forEach((image) => {
-  const listElement = document.createElement("li");
-  listElement.style.listStyle = "none";
-  const imgElement = document.createElement("img");
-
-  imgElement.src = image.url;
-  imgElement.alt = image.alt;
-  imgElement.style.width = "360px";
-  imgElement.style.height = "300px";
-  imgElement.style.display = "flex-wrap";
-  imgElement.style.gap = "24px";
-
-  listElement.appendChild(imgElement);
-  itemElement.appendChild(listElement);
-});
