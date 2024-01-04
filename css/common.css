@@ -12,6 +12,52 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+/* styles for task 1 */
+li {
+  list-style: none;
+}
+.categories {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.item {
+  border-radius: 8px;
+  background: #f6f6fe;
+}
+.title-style {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33em;
+  letter-spacing: 0.96px;
+}
+.common-list {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.common-list li {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 24px;
+
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  letter-spacing: 0.08em;
+  padding-left: 16px;
+  padding-top: 8px;
+  width: 360px;
+  height: 40px;
+}
 
 /* styles for task 2  */
 .container {
