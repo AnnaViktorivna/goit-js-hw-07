@@ -1,23 +1,12 @@
-// Напиши скрипт, який змінює колір фону елемента <body>
-//через інлайн - стиль по кліку на button.change - color
-//і задає це значення кольору текстовим вмістом для span.color.
-
-// Для генерування випадкового кольору
-//використовуй функцію getRandomHexColor().
-
-// Зверни увагу, що функція getRandomHexColor()
-// повертає колір у hex - форматі, в той час як колір
-//фону на < body > буде у форматі rgb.Це нормально й не
-//потребує якихось правок.
-
-// На що буде звертати увагу ментор при перевірці:
-// Фон на <body> задається тільки після кліку на button.change-color
-// При кожному кліку на елемент button.change-color фон <body> зафарбовується новим рандомним кольором
-// На <body> і span.color значення одного й того самого кольору
-const colorBackground = document.querySelector(".color");
-const changeColorButton = document.querySelector(".change-color");
-
-changeColorButton.addEventListener(("click", getRandomHexColor));
+const changeColorButton = document.querySelector("button");
+const colorSpan = document.querySelector(".color");
+const colorBackground = document.querySelector("body");
+changeColorButton.addEventListener("click", () => {
+  let colorCurrent = getRandomHexColor();
+  console.log(colorCurrent);
+  colorBackground.style.background = colorCurrent;
+  colorSpan.textContent = colorCurrent;
+});
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
