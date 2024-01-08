@@ -1,6 +1,28 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  /* color: yellow;
+  background-color: #212121;
+  border-radius: 4px; */
+}
+p {
+  /* width: 70px;
+  height: 30px;
+  border: 4px solid black;
+  background-color: black;
+  border-radius: 4px; */
+}
+h1 {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.33em;
+  letter-spacing: 0.96px;
+}
 
 body {
   margin: 16px;
@@ -85,4 +107,102 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* task 3 */
+
+.input-style {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0.64px;
+
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.output-style {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33em;
+  letter-spacing: 0.96px;
+}
+/* task-4 */
+.login-form {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+label {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
+}
+.style-input-email {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
+}
+.style-password {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
+}
+.style-btn {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4e75ff;
+
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.08em;
 }
