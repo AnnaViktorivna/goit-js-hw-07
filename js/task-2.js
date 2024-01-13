@@ -27,26 +27,11 @@ const images = [
 
 const galleryElement = document.querySelector(".gallery");
 
-images.forEach((image) => {
-  const listElement = document.createElement("li");
-  const imgElement = document.createElement("img");
+const imagesMarkup = images
+  .map(
+    (image) =>
+      `<li class="list-element-style"><img class="img-element-style" src="${image.url}" alt="${image.alt}"></li>`
+  )
+  .join("");
 
-  imgElement.src = image.url;
-  imgElement.alt = image.alt;
-
-  listElement.classList.add("list-element-style");
-  imgElement.classList.add("img-element-style");
-
-  listElement.appendChild(imgElement);
-  galleryElement.appendChild(listElement);
-});
-
-// const listElement = document.querySelector(".gallery");
-
-// const markup = images
-//   .map((images) => {
-//     return `<li class="list-item"><img class = "img" src=${images.url} alt = ${images.alt} /></li>`;
-//   })
-//   .join("");
-
-// listElement.insertAdjacentHTML("beforeend", markup);
+galleryElement.innerHTML = imagesMarkup;
